@@ -2,9 +2,9 @@
 
 namespace JoniDot\Reactions;
 
+use JoniDot\Reactions\Commands\ReactionsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use JoniDot\Reactions\Commands\ReactionsCommand;
 
 class ReactionsServiceProvider extends PackageServiceProvider
 {
