@@ -19,7 +19,16 @@ class ReactionsServiceProvider extends PackageServiceProvider
             ->name('reactions')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_reactions_table')
             ->hasCommand(ReactionsCommand::class);
+    }
+
+    /**
+     * Bootstrap any package services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }
