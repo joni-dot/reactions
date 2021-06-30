@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace JoniDot\Reactions\Tests;
 
 class ExampleTest extends TestCase
 {

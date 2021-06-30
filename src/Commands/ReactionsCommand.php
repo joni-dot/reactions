@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace JoniDot\Reactions\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ReactionsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'reactions';
 
     public $description = 'My command';
 
