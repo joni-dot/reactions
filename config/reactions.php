@@ -1,6 +1,6 @@
 <?php
 
-use JoniDot\Enumns\Type;
+use JoniDot\Reactions\Enums\Type;
 
 return [
     'default_reactions' => [

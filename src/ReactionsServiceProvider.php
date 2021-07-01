@@ -5,6 +5,8 @@ namespace JoniDot\Reactions;
 use JoniDot\Reactions\Commands\ReactionsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use JoniDot\Reactions\Http\Livewire\Reactions;
+use Livewire\Livewire;
 
 class ReactionsServiceProvider extends PackageServiceProvider
 {
@@ -27,8 +29,10 @@ class ReactionsServiceProvider extends PackageServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function packageBooted()
     {
+        Livewire::component('reactions::reactions', Reactions::class);
+
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }

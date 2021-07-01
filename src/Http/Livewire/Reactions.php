@@ -15,14 +15,14 @@ class Reactions extends Component
     }
 
     /**
-     * Render Comments component and show model related reactions.
+     * Render Reactions component and show model related reactions.
      *
      * @return void
      */
     public function render()
     {
-        return view('comments::livewire.reactions', [
-            'reactions' => $this->model->reactions()->get(),
+        return view('reactions::livewire.reactions', [
+            'reactions' => collect(),
         ]);
     }
 
@@ -33,6 +33,8 @@ class Reactions extends Component
      */
     public function react($reaction)
     {
+        dd('Hello');
+
         $this->model->toggleReaction(reaction);
     }
 }
