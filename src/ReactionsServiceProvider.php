@@ -3,10 +3,10 @@
 namespace JoniDot\Reactions;
 
 use JoniDot\Reactions\Commands\ReactionsCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use JoniDot\Reactions\Http\Livewire\Reactions;
 use Livewire\Livewire;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ReactionsServiceProvider extends PackageServiceProvider
 {
