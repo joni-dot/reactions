@@ -1,5 +1,11 @@
 <?php
-// config for JoniDot/ClassName
-return [
 
+use JoniDot\Enumns\Type;
+
+return [
+    'default_reactions' => [
+        Type::Like,
+        Type::Dislike,
+        Type::Love,
+    ],
 ];
