@@ -23,6 +23,7 @@ class Reactions extends Component
     {
         return view('reactions::livewire.reactions', [
             'reactions' => collect(),
+            'reactionCounts' => $this->model->reactionCounts(),
         ]);
     }
 
