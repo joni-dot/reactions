@@ -17,7 +17,7 @@ class CreateReactionsTable extends Migration
             $table->bigIncrements('id');
             $table->string('type');
             $table->unsignedBigInteger('user_id');
-            $table->morphs('likeable');
+            $table->morphs('reactable');
             $table->timestamps();
 
             $table->foreign('user_id')
