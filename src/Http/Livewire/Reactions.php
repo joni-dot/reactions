@@ -31,8 +31,8 @@ class Reactions extends Component
      *
      * @return void
      */
-    public function react($reaction)
+    public function react(string $reaction): void
     {
-        $this->model->toggleReaction(reaction);
+        $this->model->react($reaction);
     }
 }
