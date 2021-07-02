@@ -2,8 +2,8 @@
 
 namespace JoniDot\Reactions\Models\Traits;
 
-use JoniDot\Reactions\Models\Reaction;
 use Illuminate\Support\Collection;
+use JoniDot\Reactions\Models\Reaction;
 
 trait Reactable
 {
