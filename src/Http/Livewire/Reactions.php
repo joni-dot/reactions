@@ -33,8 +33,6 @@ class Reactions extends Component
      */
     public function react($reaction)
     {
-        dd('Hello');
-
         $this->model->toggleReaction(reaction);
     }
 }
