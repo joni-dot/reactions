@@ -9,10 +9,17 @@
             </span> 
             <span class="rounded-xl text-sm text-white font-extrabold">
                 @if ($reactionCounts->where('type', $reaction)->first())
-                    {{ $reactionCounts->where('type', $reaction)->first()->reaction_count }}
+                    <span wire:loading.remove wire:target="react('{{ $reaction }}')">
+                        {{ $reactionCounts->where('type', $reaction)->first()->reaction_count }}
+                    </span>
                 @else 
-                    0
+                    <span wire:loading.remove wire:target="react('{{ $reaction }}')">
+                        0
+                    </span>
                 @endif
+                <span wire:loading wire:target="react('{{ $reaction }}')">
+                    @svg('refresh', 'animate-spin fill-current w-4 h-4 mr-1 ml-0 inline')
+                </span>
             </span>
         </button>
     @endforeach
