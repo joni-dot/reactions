@@ -3,6 +3,7 @@
 namespace JoniDot\Reactions\Models\Traits;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 use JoniDot\Reactions\Models\Reaction;
 
 trait Reactable
@@ -27,7 +28,7 @@ trait Reactable
         }
 
         $this->reactions()->create([
-            'user_id' => 1,
+            'user_id' => Auth::id(),
             'type' => $reaction,
         ]);
     }
